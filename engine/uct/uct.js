@@ -24,7 +24,6 @@ Uct.prototype.getActionInfo = function(board, maxIterations, maxTime, verbose) {
 
       while (node.unexamined.length == 0 && node.children.length > 0) {
         node = node.selectChild();
-        // console.log('node is: ', node)
         variantBoard.doAction(node.action);
       }
       /* Expansion */
@@ -48,6 +47,7 @@ Uct.prototype.getActionInfo = function(board, maxIterations, maxTime, verbose) {
       }
 
       /* Backpropagation */
+      debugger;
       var result = variantBoard.getResult();
 
       while (node) {

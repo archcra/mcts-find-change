@@ -23,7 +23,7 @@ Board.prototype.copy = function() {
 
 Board.prototype.getActions = function() {
   if (this.state > 0) {
-    return this.change;
+    return JSON.parse(JSON.stringify(this.change));
   } else {
     return [];
   }
@@ -45,7 +45,6 @@ Board.prototype.getResult = function() {
   if (this.state < 0) {
     return  -this.limit;
   }
-  console.log('Now board is: ', this)
   console.log("ERROR!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
 };
 

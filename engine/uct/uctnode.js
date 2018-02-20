@@ -39,9 +39,6 @@ UctNode.prototype.selectChild = function() {
 
 UctNode.prototype.update = function(result) {
   ++this.visits;
-  if (isNaN(result)) {
-    console.log('===now result is: ', result, 'this.wins: ', this.wins)
-  }
   this.wins += result;
 };
 

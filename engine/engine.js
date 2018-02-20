@@ -43,7 +43,7 @@ function handleCommand(commandLine) {
           response.bestmove = -1;
         }else{
 
-          var result = uct.getActionInfo(board, 1200, 1000, false);
+          var result = uct.getActionInfo(board, 640000, 3000, false);
           response.info = result.info
           response.bestmove = result.action;
         }
