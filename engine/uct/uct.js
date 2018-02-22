@@ -47,7 +47,6 @@ Uct.prototype.getActionInfo = function(board, maxIterations, maxTime, verbose) {
       }
 
       /* Backpropagation */
-      debugger;
       var result = variantBoard.getResult();
 
       while (node) {
